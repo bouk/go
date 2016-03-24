@@ -519,7 +519,7 @@ func (l *lexer) ident(c rune) {
 	// general case
 	for {
 		if c >= utf8.RuneSelf {
-			if unicode.IsLetter(c) || c == '_' || unicode.IsDigit(c) || importpkg != nil && c == 0xb7 {
+			if unicode.IsLetter(c) || c == '_' || unicode.IsDigit(c) || c == '💩' || importpkg != nil && c == 0xb7 {
 				if cp.Len() == 0 && unicode.IsDigit(c) {
 					Yyerror("identifier cannot begin with digit %#U", c)
 				}
